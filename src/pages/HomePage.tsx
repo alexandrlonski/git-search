@@ -4,7 +4,7 @@ import { useDebounce } from "../hooks/debounce";
 import { useLazyGetUserReposQuery, useSearchUsersQuery } from "../store/github/github.api";
 
 export function HomePage() {
-    const [search, setSearch] = useState('');
+    const [search, setSearch] = useState('lonski');
     const debounced = useDebounce(search);
     const [dropdown, setDropdown] = useState(false)
     const {isLoading, isError, data} = useSearchUsersQuery(debounced, {
